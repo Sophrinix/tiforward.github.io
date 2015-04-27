@@ -58,22 +58,59 @@ There was minimal feedback.
 
 - - -
 
-### Roadmap (Order of importance)
+### Layout Engine
+- [`#6` Layout Engine][issue-6]
+
+Five days ago Matt updated this topic with:
+For reference, sake. This project exists -> https://github.com/yomybaby/VirtualTiExample
+A "virtual dom" for Ti native UI
+
+Yuchi brought up:
+@yomybaby keep me in the morning loop cause I'm digging into ES6 and JSX transformations, please.
 
 
 
 - - -
 
-### Accessing the platform SDK native APIs
+### Backwards compatibility 
+- [`#6` Backwards compatibility][issue-12]
+
+Not a lot changed with this conversation, other than further agreement that backwards compatibility should not slow down ti.next
 
 
 - - -
 
-### Ti.Forward Developer Day
+### Roadmap (aka "the first and most important thing to do" or "focus") 
+- [`#6` Backwards compatibility][issue-12]
 
-- - -
+This topic saw a lot of debate
 
-### Backwards compatibility
+Chris Barber argued for a CI server for JavaScript Core. https://github.com/TiForward/discuss/issues/13#issuecomment-94582498
+
+Yuchi's comment is worth reading in full https://github.com/TiForward/discuss/issues/13#issuecomment-94592668:
+I’ll try to answer @rborn from an higher level.
+
+The challenge we have at hand is not specifically on the engineering side. What we’re trying to achieve here is a broader insight in the topics that need to be discussed for the future of the SDK as a whole. Most of those topics, while seemingly unrelated, are actually very tightly tied.
+
+Take ES6 for example, as @cb1kenobi expressed here and in the related discussion (#8), any decision on this side has important fallbacks on how we’re going to integrate the runtime and how we’re going to build the (new?) pipeline.
+
+Or take the layouting. This is fantastic engineering challenge because it gives us a deeper vision in which kind of UI patterns we’re going to dive in.
+
+What about tooling? The success of a development platform comes from the constellation of tools that comes around it, without those a platform has value only for itself.
+
+Packages and dependencies? Just look at the power npm has over the Node.js/iojs community.
+
+Having access to the native APIs can be considered from an engineering standing point almost a solved issue. We have a new bridge, we have working prototypes of an automatic bindings generator (the ‘metabase’), we have other products that cloned our initial approach and looking good.
+What we feel now is that the solution is currently an half-assed one, and probably not the one that we actually need.
+
+Building it all together will bring a shared knowledge and a wider understanding.
+
+Back to the root of the discussion, a real roadmap will emerge in the next weeks, as we solve the smaller technical stoppers and we can start to flesh things out.
+
+rborn cautioned TiForward to not be too ambitious. Again worth reading in full: https://github.com/TiForward/discuss/issues/13#issuecomment-94745326
+
+Infosia pushed a build script and cmake file to build HAL on iOS https://github.com/TiForward/discuss/issues/13#issuecomment-95396357
+
 
 - - -
 
@@ -81,17 +118,11 @@ There was minimal feedback.
 
 A great week. I look *forward* the *next* one.
 
-[issue-1]: https://github.com/TiForward/discuss/issues/1
-[issue-2]: https://github.com/TiForward/discuss/issues/2
-[issue-3]: https://github.com/TiForward/discuss/issues/3
-[issue-4]: https://github.com/TiForward/discuss/issues/4
-[issue-5]: https://github.com/TiForward/discuss/issues/5
+
 [issue-6]: https://github.com/TiForward/discuss/issues/6
-[issue-7]: https://github.com/TiForward/discuss/issues/7
-[issue-8]: https://github.com/TiForward/discuss/issues/8
-[issue-9]: https://github.com/TiForward/discuss/issues/9
-[issue-11]: https://github.com/TiForward/discuss/issues/11
 [issue-12]: https://github.com/TiForward/discuss/issues/12
 [issue-13]: https://github.com/TiForward/discuss/issues/13
+[issue-14]: https://github.com/TiForward/discuss/issues/14
+
 
 
